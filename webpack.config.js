@@ -9,10 +9,11 @@ var config = {
     filename: 'bundle.js',
     chunkFilename: '[chunkhash].js'
   },
-  // allows jquery to be a globally accessed as $ 
+  // allows jquery to be a globally accessed as $
   plugins: [
     new webpack.ProvidePlugin({
-      '$' : 'jquery'
+      '$' : 'jquery',
+      'jQuery': 'jquery'
     })
   ],
   module: {

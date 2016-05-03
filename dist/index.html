@@ -2,9 +2,81 @@
 <html>
 <head>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
 </head>
 <body>
-  <h1>hello world</h1>
+  <div class="container-fluid">
+
+    <!-- NAVIGATION BAR -->
+    <nav id="navbar" class="navbar">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#aboutMe"><p class="lead">About</p></a></li>
+          <li><a href="#experience"><p class="lead">Experience</p></a></li>
+          <li><a href=""><p class="lead">Skills</p></a></li>
+          <li><a href=""><p class="lead">Projects</p></a></li>
+          <li><a href="#education"><p class="lead">Education</p></a></li>
+          <li><a href=""><p class="lead">Additional Information</p></a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- RESUME CONTENT -->
+    <div class="container-fluid">
+      <!-- HOME SECTION AND ABOUT ME  -->
+      <div class="section" id="aboutMe">
+          <h1 class="center" id="name">Benny Tran</h1>
+          <p class="lead center" id="tagline">
+            Student specializing in full-stack web development,
+            android development, and data programming
+          </p>
+          <div class="row center">
+            <a id="github" class="center" href="https://github.com/tranbenny">
+              <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+            </a>
+            <a id='linkedin' href="https://www.linkedin.com/in/tranbenny" class="left-spacing">
+              <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+            </a>
+          </div>
+      </div>
+
+      <!-- EXPERIENCE, EDUCATION -->
+      <div class="row section">
+        <div id="experience" class="col-md-6 col-sm-12">
+          <h1>Work Experience</h1>
+          <!-- list of job types
+          TODO: factor descriptions into accordian tags -->
+          <div id="accordian">
+            <h2>Undergraduate Research Intern</h2>
+            <div>
+              <p>kdjsfhdksfndjks</p>
+            </div>
+
+            <h2>Web Developer Intern</h2>
+            <div>
+              <p>dsklfndklfn</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="education" class="col-md-6 col-sm-12">
+          <h1>Education</h1>
+          <h3 style="margin-top:65px;">BS in Biochemistry</h3>
+          <h3>Minors: Chemistry, Math</h3>
+          <h4>University of Washington - Seattle, WA</h4>
+          <h4>Expected Graduation: June 2017</h4>
+        </div>
+      </div>
+      <!-- SKILLS -->
+      <!-- PROJECTS -->
+      <!-- EDUCATION -->
+      <!-- ADDITIONAL -->
+
+
+    </div>
+
+
+  </div>
   <script src="bundle.js"></script>
 </body>
 </html>
