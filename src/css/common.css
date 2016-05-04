@@ -14,6 +14,10 @@ body {
   margin-top: 40px;
 }
 
+.right-spacing {
+  margin-right: 10px;
+}
+
 .section {
   padding-top:70px;
   padding-bottom: 30px;

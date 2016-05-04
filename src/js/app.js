@@ -10,6 +10,7 @@ var dimensions = getSectionHeights(); // height dimensions for page section
 function main() {
   addButtonFunctions();
   initializePage();
+  hoverAnimations();
 }
 
 // sets passed tab as the active tab for navbar tab highlighting
@@ -50,6 +51,7 @@ function addButtonFunctions() {
   $('.nav-item').on('click', scrollToSection);
   // adds rotation button to icons and toggles description sections
   // ISSUE: lags on coursework rotation, buttons not working
+  // TODO: change diagonal animation to vertical animation
   $('.rotateButton').on('click', function(event) {
     var targetId = event.target.id + "Section";
     if ($('#' + event.target.id).hasClass('rotate')) {
@@ -83,6 +85,7 @@ function getSectionHeights() {
 
 // connects scrolling to page to be linked to active tags on navbar
 function scrollingTab(event) {
+  event.preventDefault();
   var scroll = $(window).scrollTop();
   if (scroll > dimensions.about && scroll < dimensions.experience) {
     setActiveTab('about');
@@ -97,12 +100,30 @@ function scrollingTab(event) {
   }
 }
 
+// add hover animations to webpage
+function hoverAnimations() {
+    // TODO: add click function
+    $('#project1').hover(function() {
+      $('#project1Title').css({'font-size':38, 'opacity':0.5});
+    }, function() {
+      $('#project1Title').css({'font-size':24, 'opacity': 1});
+    });
+
+    // TODO: add click function
+    $('#project2').hover(function() {
+      $('#project2Title').css({'font-size':38, 'opacity':0.5});
+    }, function() {
+      $('#project2Title').css({'font-size':24, 'opacity': 1});
+    });
+}
+
 // hides and shows secitons on inital page load
 function initializePage() {
   // hide job sections on initial page load
   $('#radiationSection').hide();
   $('#developerSection').hide();
   $('#courseworkSection').hide();
+
 }
 
 main();

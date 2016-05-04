@@ -7,4 +7,17 @@
 .project {
   background-color: lightgray;
   height: 200px;
+  width: 75%;
+  margin: 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project1 {
+
+}
+
+#project2 {
+
 }
