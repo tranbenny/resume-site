@@ -1,3 +1,7 @@
+body {
+
+}
+
 .center {
   text-align: center;
 }
@@ -7,5 +11,15 @@
 }
 
 .section {
-  padding-bottom: 100px;
+  padding-top:70px;
+  padding-bottom: 30px;
+}
+
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: all 1x ease;
 }

@@ -9,11 +9,15 @@ User Interaction:
 - add navigation menu for small screens
 - add link to paper resume
 - add modals/popups for projects section
+ISSUES:
+- fix navigation menu overlap
 
 Animations:
 - Scrolling animation for tabs
 - fade in animations for initial page load
 - add hover animation for projects section
+ISSUES:
+- fix upwards scrolling back to about section
 
 Testing
 - test on chrome, firebox, IE, safari

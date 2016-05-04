@@ -8,15 +8,15 @@
   <div class="container-fluid">
 
     <!-- NAVIGATION BAR -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar navbar-fixed-top">
       <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#aboutMe"><p class="lead">About</p></a></li>
-          <li><a href="#experience"><p class="lead">Experience</p></a></li>
-          <li><a href="#skills"><p class="lead">Skills</p></a></li>
-          <li><a href="#projects"><p class="lead">Projects</p></a></li>
-          <li><a href="#education"><p class="lead">Education</p></a></li>
-          <li><a href=""><p class="lead">Additional Information</p></a></li>
+          <li id="aboutLink" class="active nav-item"><a href="#about"><p class="lead">About</p></a></li>
+          <li id="experienceLink" class="nav-item"><a href="#experience"><p class="lead">Experience</p></a></li>
+          <li id="skillsLink" class="nav-item"><a href="#skills"><p class="lead">Skills</p></a></li>
+          <li id="projectsLink" class="nav-item"><a href="#projects"><p class="lead">Projects</p></a></li>
+          <li id="educationLink" class="nav-item"><a href="#education"><p class="lead">Education</p></a></li>
+          <li id="additionalLink" class="nav-item"><a href="#additional"><p class="lead">Additional</p></a></li>
         </ul>
       </div>
     </nav>
@@ -24,7 +24,7 @@
     <!-- RESUME CONTENT -->
     <div class="container-fluid">
       <!-- HOME SECTION AND ABOUT ME  -->
-      <div class="section" id="aboutMe">
+      <div class="section" id="about">
           <h1 class="center" id="name">Benny Tran</h1>
           <p class="lead center" id="tagline">
             Student specializing in full-stack web development,
@@ -37,45 +37,83 @@
             <a id='linkedin' href="https://www.linkedin.com/in/tranbenny" class="left-spacing">
               <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
             </a>
+            <a id="resume" class="left-spacing" href="resume link here">
+              <i class="fa fa-file-text fa-4x" aria-hidden="true"></i>
+            </a>
           </div>
       </div>
 
       <!-- EXPERIENCE, EDUCATION -->
       <div class="row section">
-        <div id="experience" class="col-md-6 col-sm-12" style="padding-left:80px;">
+        <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
           <h1>Work Experience</h1>
           <!-- list of job types
           TODO: factor descriptions into accordian tags -->
           <div style="margin-top:65px;" id="accordian">
-            <h3>Undergraduate Research Assistant</h3>
-            <h4>University of Washington Department of Radiation Oncology</h4>
-            <div>
-              <p>Seattle, WA</p>
-              <p>November 2015 - Present</p>
-              <p>Python, Matlab</p>
-              <p>Studying how linear optimization techniques can improve cancer radiation treatments</p>
-              <p>Improved validity of data manipulation with error responses and tests for geometrical beam orientations and radiation dosages</p>
+            <div class="row">
+              <div class="col-md-11">
+                <h3>Undergraduate Research Assistant</h3>
+                <h4>
+                  University of Washington Department of Radiation Oncology
+                </h4>
+                <div id="radiationSection">
+                  <p>Seattle, WA</p>
+                  <p>November 2015 - Present</p>
+                  <p>Python, Matlab</p>
+                  <p>Studying how linear optimization techniques can improve cancer radiation treatments</p>
+                  <p>Improved validity of data manipulation with error responses and tests for geometrical beam orientations and radiation dosages</p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <h3></h3>
+                <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="radiation"></i>
+              </div>
             </div>
 
-            <h3>Web Developer Intern</h3>
-            <h4>CashVue</h4>
-            <div>
-              <p>Seattle, WA</p>
-              <p>October 2015 - Present</p>
-              <p>Tools: Angular, React, Node, Bootstrap, Express, D3, MongoDB</p>
-              <p>Led front-end development of dashboard project, improved process with suggestions of new development and build tools</p>
+            <div class="row">
+              <div class="col-md-11">
+                <h3>Web Developer Intern</h3>
+                <h4>CashVue</h4>
+                <div id="developerSection">
+                  <p>Seattle, WA</p>
+                  <p>October 2015 - Present</p>
+                  <p>Tools: Angular, React, Node, Bootstrap, Express, D3, MongoDB</p>
+                  <p>Led front-end development of dashboard project, improved process with suggestions of new development and build tools</p>
+                </div>
+              </div>
+              <div class="col-md-1">
+                <h3></h3>
+                <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="developer"></i>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <div id="education" class="col-md-6 col-sm-12" style="padding-left:80px;">
+        <div id="education" class="col-md-6 col-sm-12 section" style="padding-left:70px;">
           <h1>Education</h1>
-          <h3 style="margin-top:65px;">BS in Biochemistry</h3>
-          <h3>Minors: Chemistry, Math</h3>
-          <h4>University of Washington - Seattle, WA</h4>
-          <h4>Expected Graduation: June 2017</h4>
-          <!-- turn this into an accordian -->
-          <h4>Coursework</h4>
+            <div style="margin-top:65px;">
+              <div class="col-md-11">
+                <h3>BS in Biochemistry</h3>
+              </div>
+              <div class="col-md-1">
+                <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true"
+                id='coursework'></i>
+              </div>
+            </div>
+
+            <h3>Minors: Chemistry, Math</h3>
+            <h4>University of Washington - Seattle, WA</h4>
+            <h4>Expected Graduation: June 2017</h4>
+            <!-- turn this into an accordian -->
+
+            <div id="courseworkSection">
+              <h4>Coursework</h4>
+              <ul>
+                <li>computer programming</li>
+                <li>algorithms</li>
+              </ul>
+            </div>
         </div>
       </div>
 
@@ -108,7 +146,7 @@
       </div>
 
       <!-- PROJECTS -->
-      <div id="projects" class="center">
+      <div id="projects" class="center section">
         <h1>Projects</h1>
         <div class="row">
           <div class="col-md-5">

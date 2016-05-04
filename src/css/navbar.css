@@ -1,5 +1,6 @@
-#navbar {
-
+#navbar p {
+  margin-bottom: 0px;
+  font-weight:bold;
 }
 
 .active {
@@ -8,5 +9,4 @@
 
 .active p {
   color: red;
-  font-weight: bold;
 }
