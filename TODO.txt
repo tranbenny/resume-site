@@ -1,0 +1,20 @@
+TODO List:
+
+Content:
+-
+
+User Interaction:
+- update active tab style
+- Wrap courses, skills, work experience in accordian tags
+- add navigation menu for small screens
+- add link to paper resume
+- add modals/popups for projects section
+
+Animations:
+- Scrolling animation for tabs
+- fade in animations for initial page load
+- add hover animation for projects section
+
+Testing
+- test on chrome, firebox, IE, safari
+- test out different sizes: laptop, phone

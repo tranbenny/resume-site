@@ -7,6 +7,7 @@ require('bootstrap');
 require('./css/navbar.css');
 require('./css/common.css');
 require('./css/aboutMe.css');
+require('./css/projects.css');
 
 // app's js files
 require('./js/app.js');
