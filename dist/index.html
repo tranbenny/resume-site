@@ -47,44 +47,40 @@
       <div class="row section">
         <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
           <h1>Work Experience</h1>
-          <!-- list of job types
-          TODO: factor descriptions into accordian tags -->
+          <!-- list of job types -->
           <div style="margin-top:65px;" id="accordian">
+            <!-- TODO: fix layout of words and accordian icon -->
             <div class="row">
-              <div class="col-md-11">
-                <h3>Undergraduate Research Assistant</h3>
-                <h4>
-                  University of Washington Department of Radiation Oncology
-                </h4>
-                <div id="radiationSection">
+                <div class="jobHeader">
+                  <h3 style="display:inline-block;">Undergraduate Research Assistant</h3>
+                  <i class="fa fa-angle-left fa-2x rotateButton" aria-hidden="true" id="radiation"
+                  style="margin-top:20px; float:right;"></i>
+                  <h4>
+                    University of Washington Department of Radiation Oncology
+                  </h4>
+                </div>
+                <div id="radiationSection" class="jobRole">
                   <p>Seattle, WA</p>
                   <p>November 2015 - Present</p>
                   <p>Python, Matlab</p>
                   <p>Studying how linear optimization techniques can improve cancer radiation treatments</p>
                   <p>Improved validity of data manipulation with error responses and tests for geometrical beam orientations and radiation dosages</p>
                 </div>
-              </div>
-              <div class="col-md-1">
-                <h3></h3>
-                <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="radiation"></i>
-              </div>
             </div>
 
             <div class="row">
-              <div class="col-md-11">
-                <h3>Web Developer Intern</h3>
-                <h4>CashVue</h4>
-                <div id="developerSection">
+                <div class="jobHeader top-spacing">
+                  <h3 style="display:inline-block">Web Developer Intern</h3>
+                  <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="developer"
+                  style="float:right; margin-top:20px;"></i>
+                  <h4>CashVue</h4>
+                </div>
+                <div id="developerSection" class="jobRole">
                   <p>Seattle, WA</p>
                   <p>October 2015 - Present</p>
                   <p>Tools: Angular, React, Node, Bootstrap, Express, D3, MongoDB</p>
                   <p>Led front-end development of dashboard project, improved process with suggestions of new development and build tools</p>
                 </div>
-              </div>
-              <div class="col-md-1">
-                <h3></h3>
-                <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="developer"></i>
-              </div>
             </div>
 
           </div>

@@ -4,7 +4,7 @@
 
 // global variables
 var current = $('#aboutLink'); // current section web page is at
-var dimensions = getSectionHeights();
+var dimensions = getSectionHeights(); // height dimensions for page section
 
 
 function main() {
@@ -12,9 +12,9 @@ function main() {
   initializePage();
 }
 
-// sets passed tab as the actve tab
+// sets passed tab as the active tab for navbar tab highlighting
+// sets active tab to experience and education if either tab is clicked/scrolled past
 function setActiveTab(section) {
-  // SETS UP NAVBAR TAB HIGHLIGHTING
   if (current.is($('#experienceLink')) || current.is($('#educationLink'))) {
     $('#experienceLink').removeClass('active');
     $('#educationLink').removeClass('active');
@@ -31,15 +31,12 @@ function setActiveTab(section) {
   }
 }
 
-
-
 // handles scrolling animation
 function scrollToSection(event) {
   var section = event.target.innerText.toLowerCase().trim();
   setActiveTab(section);
+  // temporarily removes scrolling function when button is clicked
   $(window).off('scroll', scrollingTab);
-  // scrolling animation to specific section
-  // ISSUE: DONT WANT ACTIVE TAB BOUNCING FOR THE SCROLLING WHEN BUTTON CLICKED
   $('html, body').animate({
     scrollTop: $('#' + section).offset().top
   }, 1000, function() {
@@ -52,7 +49,7 @@ function addButtonFunctions() {
   // add scrolling function to all navigation items in bar
   $('.nav-item').on('click', scrollToSection);
   // adds rotation button to icons and toggles description sections
-  // ISSUE: lags on coursework rotation
+  // ISSUE: lags on coursework rotation, buttons not working
   $('.rotateButton').on('click', function(event) {
     var targetId = event.target.id + "Section";
     if ($('#' + event.target.id).hasClass('rotate')) {
@@ -84,9 +81,7 @@ function getSectionHeights() {
   };
 }
 
-// add scrolling to page to be linked to active tags on navbar
-// fix scrolling lag
-// scrolling function for tabs
+// connects scrolling to page to be linked to active tags on navbar
 function scrollingTab(event) {
   var scroll = $(window).scrollTop();
   if (scroll > dimensions.about && scroll < dimensions.experience) {
@@ -102,6 +97,7 @@ function scrollingTab(event) {
   }
 }
 
+// hides and shows secitons on inital page load
 function initializePage() {
   // hide job sections on initial page load
   $('#radiationSection').hide();

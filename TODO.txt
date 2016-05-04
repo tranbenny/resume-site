@@ -12,7 +12,7 @@ User Interaction:
 - connect scrolling to active nav bar, DONE
 ISSUES:
 - fix navigation menu overlap, DONE
-- dont want active tab bouncing for the scrolling when button clicked, DONE 
+- dont want active tab bouncing for the scrolling when button clicked, DONE
 
 Animations:
 - Scrolling animation for tabs, DONE
@@ -20,6 +20,9 @@ Animations:
 - add rotate animation for projects section, DONE  add hover icons
 ISSUES:
 - fix upwards scrolling back to about section
+
+Error Handling:
+- handle 404 errors 
 
 Testing
 - test on chrome, firebox, IE, safari

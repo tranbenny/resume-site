@@ -10,6 +10,10 @@ body {
   margin-left: 20px;
 }
 
+.top-spacing {
+  margin-top: 40px;
+}
+
 .section {
   padding-top:70px;
   padding-bottom: 30px;
