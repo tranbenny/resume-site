@@ -11,6 +11,7 @@ function main() {
   addButtonFunctions();
   initializePage();
   hoverAnimations();
+  // console.log($(window).width());
 }
 
 // sets passed tab as the active tab for navbar tab highlighting
@@ -115,6 +116,17 @@ function hoverAnimations() {
     }, function() {
       $('#project2Title').css({'font-size':24, 'opacity': 1});
     });
+
+
+    // skills icons hover function, set opacity
+    $('.skill-icon').hover(function() {
+      $(this).css({'opacity': 0.5, 'cursor' :'pointer'});
+    }, function() {
+      $(this).css({'opacity': 1});
+    });
+
+
+    // TODO: add opacity hovering to jobs, skills, and projects
 }
 
 // hides and shows secitons on inital page load
@@ -124,7 +136,17 @@ function initializePage() {
   $('#developerSection').hide();
   $('#courseworkSection').hide();
 
+
+  // $('#skills').css({'margin-left': $(window).width() / 4});
 }
+
+// use this to detect screen size and layout changes
+/*
+$(window).resize(function(event) {
+  // console.log(event);
+  $('#skills').css({'margin-left': $(window).width() / 4});
+});
+*/
 
 main();
 

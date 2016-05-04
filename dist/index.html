@@ -10,21 +10,31 @@
     <!-- NAVIGATION BAR -->
     <nav id="navbar" class="navbar navbar-fixed-top">
       <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-          <li id="aboutLink" class="active nav-item"><a href="#about"><p class="lead">About</p></a></li>
-          <li id="experienceLink" class="nav-item"><a href="#experience"><p class="lead">Experience</p></a></li>
-          <li id="skillsLink" class="nav-item"><a href="#skills"><p class="lead">Skills</p></a></li>
-          <li id="projectsLink" class="nav-item"><a href="#projects"><p class="lead">Projects</p></a></li>
-          <li id="educationLink" class="nav-item"><a href="#education"><p class="lead">Education</p></a></li>
-          <li id="additionalLink" class="nav-item"><a href="#additional"><p class="lead">Additional</p></a></li>
-        </ul>
+        <!-- small screen navbar -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-tabs" aria-expanded="false">
+            <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-tabs">
+        <!-- normal navbar -->
+          <ul class="nav navbar-nav navbar-right">
+            <li id="aboutLink" class="active nav-item"><a href="#about"><p class="lead">HOME</p></a></li>
+            <li id="experienceLink" class="nav-item"><a href="#experience"><p class="lead">EXPERIENCE</p></a></li>
+            <li id="skillsLink" class="nav-item"><a href="#skills"><p class="lead">SKILLS</p></a></li>
+            <li id="projectsLink" class="nav-item"><a href="#projects"><p class="lead">PROJECTS</p></a></li>
+            <li id="educationLink" class="nav-item"><a href="#education"><p class="lead">EDUCATION</p></a></li>
+            <li id="additionalLink" class="nav-item"><a href="#additional"><p class="lead">ABOUT</p></a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!-- RESUME CONTENT -->
     <div class="container-fluid">
       <!-- HOME SECTION AND ABOUT ME  -->
-      <div class="section" id="about">
+      <div class="section" id="about" style="padding-bottom:30px;">
           <h1 class="center" id="name">Benny Tran</h1>
           <p class="lead center" id="tagline">
             Specializing in full-stack web development,
@@ -114,55 +124,79 @@
       </div>
 
       <!-- SKILLS -->
-      <div id="skills" class="row section">
-        <h1 style="margin-left:35px;">Skills</h1>
+      <div id="skills" class="row section center">
         <!--
-        <div class="col-md-4">
-          <h3>Languages/Platforms</h3>
-          <p>Java</p>
-          <p>Python</p>
-          <p>Matlab</p>
-          <p>JavaScript/ES6</p>
-          <p>SQL</p>
-          <p>Node</p>
-          <p>Android SDK</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Frameworks</h3>
-          <p>React</p>
-          <p>Angular</p>
-          <p>Bootstrap</p>
-          <p>Express</p>
-          <p>Flask</p>
-          <p>junit</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Additional Tools</h3>
-          <p>MySQL</p>
-          <p>git</p>
-          <h3>Familiar with: </h3>
-          <p>pandas</p>
-          <p>sci-kit learn</p>
-          <p>D3</p>
-        </div> -->
         <div class="row">
+            <h1 style="padding-left:50px;">Skills</h1>
             <div class="row">
-              <h3 class="col-md-3" style="border-right: 5px solid lightblue; padding-left:65px;">Programming Languages</h3>
-              <h4 class="col-md-9 top-spacing" style="text-align:left;">Java, Python, JavaScript/ES6, Matlab, SQL</h4>
+              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; padding-left:65px;">Programming Languages</h3>
+              <h4 class="col-md-9 col-sm-12 top-spacing" style="text-align:left;">Java, Python, JavaScript/ES6, Matlab, SQL</h4>
             </div>
 
             <div class="row">
-              <h3 class="col-md-3" style="border-right: 5px solid lightblue; margin-top:-25px;
+              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; margin-top:-25px;
               padding-top:50px; padding-left:65px;">Web Development</h3>
-              <h4 class="col-md-9" style="padding-top:30px; text-align:left;">React, Angular, Bootstrap, jQuery, Express, Flask</h4>
+              <h4 class="col-md-9 col-sm-12" style="padding-top:30px; text-align:left;">React, Angular, Bootstrap, jQuery, Express, Flask</h4>
             </div>
 
             <div class="row">
-              <h3 class="col-md-3" style="border-right: 5px solid lightblue; margin-top:-25px;
+              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; margin-top:-25px;
               padding-top:50px; padding-bottom:10px; padding-left:65px;">Database/Data Analysis</h3>
-              <h4 class="col-md-9" style="padding-top:30px; text-align:left;">MySQL, pandas, sci-kit learn, D3</h4>
+              <h4 class="col-md-9 col-sm-12" style="padding-top:30px; text-align:left;">MySQL, pandas, sci-kit learn, D3</h4>
             </div>
 
+        </div>
+        -->
+        <h1>Skills</h1>
+        <div class="col-md-10 col-md-offset-1 col-lg-12 col-sm-12" style="margin-top:30px;">
+          <div class="col-md-3 col-sm-12" style="height:400px;">
+            <div class="skill-icon">
+              <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+            </div>
+            <h4>Programming Languages</h4>
+            <div id="languageSkills">
+              <h4 class="top-spacing skill-item">Java</h4>
+              <h4 class="skill-item">Python</h4>
+              <h4 class="skill-item">JavaScript/ES6</h4>
+              <h4 class="skill-item">Matlab</h4>
+              <h4 class="skill-item">SQL</h4>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="skill-icon">
+              <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+            </div>
+            <h4>Android Programming</h4>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="skill-icon">
+              <i class="fa fa-file-code-o fa-5x" aria-hidden="true"></i>
+            </div>
+            <h4>Web Development/Frameworks</h4>
+            <div id="webSkills">
+              <h4 class="skill-item top-spacing">React</h4>
+              <h4 class="skill-item">Angular</h4>
+              <h4 class="skill-item">Bootstrap</h4>
+              <h4 class="skill-item">jQuery</h4>
+              <h4 class="skill-item">Express</h4>
+              <h4 class="skill-item">Flask</h4>
+              <h4 class="skill-item">junit</h4>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="skill-icon">
+              <i class="fa fa-database fa-5x" aria-hidden="true"></i>
+            </div>
+            <h4>Databases/Data Analysis</h4>
+            <div id="dataSkills">
+              <h4 class="skill-item top-spacing">MySQL</h4>
+              <h4 class="top-spacing">Familiar with:</h4>
+              <h4 class="skill-item">MongoDB/NoSQL</h4>
+              <h4 class="skill-item">pandas</h4>
+              <h4 class="skill-item">D3</h4>
+              <h4 class="skill-item">sci-kit learn</h4>
+            </div>
+          </div>
         </div>
       </div>
 

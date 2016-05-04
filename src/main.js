@@ -9,6 +9,7 @@ require('./css/common.css');
 require('./css/aboutMe.css');
 require('./css/projects.css');
 require('./css/experience.css');
+require('./css/skills.css');
 
 // app's js files
 require('./js/app.js');

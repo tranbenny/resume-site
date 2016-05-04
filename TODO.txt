@@ -5,11 +5,12 @@ Content:
 
 User Interaction:
 - update active tab style, DONE
-- Wrap courses, skills, work experience in accordian tags
+- Wrap courses, skills, work experience in accordian tags, DONE
 - add navigation menu for small screens
+  - need to add background styling and click functions for when the menu is collapsed
 - add link to paper resume
-- add modals/popups for projects section
 - connect scrolling to active nav bar, DONE
+- create slider for project section
 ISSUES:
 - fix navigation menu overlap, DONE
 - dont want active tab bouncing for the scrolling when button clicked, DONE
@@ -19,10 +20,11 @@ Animations:
 - fade in animations for initial page load
 - add rotate animation for projects section, DONE  add hover icons
 ISSUES:
-- fix upwards scrolling back to about section
+- fix upwards scrolling back to about section, DONE
+- scrolling animation broke, need to fix
 
 Error Handling:
-- handle 404 errors 
+- handle 404 errors
 
 Testing
 - test on chrome, firebox, IE, safari
