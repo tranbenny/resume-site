@@ -56,7 +56,7 @@
       <!-- EXPERIENCE, EDUCATION -->
       <div class="row section">
         <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
-          <h1>Work Experience</h1>
+          <p style="font-size:36px;">WORK EXPERIENCE</p>
           <!-- list of job types -->
           <div style="margin-top:65px;" id="accordian">
             <!-- TODO: fix layout of words and accordian icon -->
@@ -97,7 +97,7 @@
         </div>
 
         <div id="education" class="col-md-6 col-sm-12 section" style="padding-left:70px;">
-          <h1>Education</h1>
+          <p style="font-size:36px;">EDUCATION</p>
             <div style="margin-top:65px;">
                 <div class="jobHeader">
                   <h3 style="display:inline-block; margin-left:20px;">Bachelor of Science: Biochemistry</h3>
@@ -125,29 +125,7 @@
 
       <!-- SKILLS -->
       <div id="skills" class="row section center">
-        <!--
-        <div class="row">
-            <h1 style="padding-left:50px;">Skills</h1>
-            <div class="row">
-              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; padding-left:65px;">Programming Languages</h3>
-              <h4 class="col-md-9 col-sm-12 top-spacing" style="text-align:left;">Java, Python, JavaScript/ES6, Matlab, SQL</h4>
-            </div>
-
-            <div class="row">
-              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; margin-top:-25px;
-              padding-top:50px; padding-left:65px;">Web Development</h3>
-              <h4 class="col-md-9 col-sm-12" style="padding-top:30px; text-align:left;">React, Angular, Bootstrap, jQuery, Express, Flask</h4>
-            </div>
-
-            <div class="row">
-              <h3 class="col-md-3 col-sm-12" style="border-right: 5px solid lightblue; margin-top:-25px;
-              padding-top:50px; padding-bottom:10px; padding-left:65px;">Database/Data Analysis</h3>
-              <h4 class="col-md-9 col-sm-12" style="padding-top:30px; text-align:left;">MySQL, pandas, sci-kit learn, D3</h4>
-            </div>
-
-        </div>
-        -->
-        <h1>Skills</h1>
+        <p style="font-size:36px;">SKILLS</p>
         <div class="col-md-10 col-md-offset-1 col-lg-12 col-sm-12" style="margin-top:30px;">
           <div class="col-md-3 col-sm-12" style="height:400px;">
             <div class="skill-icon">
@@ -201,8 +179,29 @@
       </div>
 
       <!-- PROJECTS -->
-      <div id="projects" class="center section">
-        <h1>Projects</h1>
+      <div id="projects" class="center section row">
+        <p style="font-size:36px;">PROJECTS</p>
+        <div class="row">
+          <div class="col-md-1 top-spacing arrowCol">
+            <i class="fa fa-caret-left fa-5x sliderArrow" id="left"></i>
+          </div>
+          <div class="col-md-10 col-lg-10 col-sm-12 top-spacing">
+            <div style="height:500px; border:1px solid black;">
+              <div style="height:100%" id="project1">
+                <div class="row" style="height:100%">
+                  <div class="col-md-7" style="height:100%; border-right: 1px solid black"></div>
+                  <div class="col-md-5"></div>
+                </div>
+              </div>
+              <div style="height:100%; display:none;" id="project2">project 2</div>
+            </div>
+            <div id="sliderTracker"></div>
+          </div>
+          <div class="col-md-1 top-spacing arrowCol">
+            <i class="fa fa-caret-right fa-5x sliderArrow" id="right"></i>
+          </div>
+        </div>
+        <!--
         <div class="row">
           <div class="col-md-6">
             <div id="project1" class="project">
@@ -215,10 +214,11 @@
             </div>
           </div>
         </div>
+        -->
       </div>
 
       <!-- ADDITIONAL -->
-      <div id="additional" class="section center">
+      <div id="additional" class="section center row">
         <h1>Additional</h1>
       </div>
 

@@ -5,6 +5,7 @@
 // global variables
 var current = $('#aboutLink'); // current section web page is at
 var dimensions = getSectionHeights(); // height dimensions for page section
+// create a global variable of the current project as well
 
 
 function main() {
@@ -125,6 +126,12 @@ function hoverAnimations() {
       $(this).css({'opacity': 1});
     });
 
+    $('.sliderArrow').hover(function() {
+      $(this).css({'opacity':1, 'cursor':'pointer'});
+    }, function() {
+      $(this).css({'opacity':0.6, 'cursor':'default'});
+    });
+
 
     // TODO: add opacity hovering to jobs, skills, and projects
 }
@@ -136,17 +143,18 @@ function initializePage() {
   $('#developerSection').hide();
   $('#courseworkSection').hide();
 
-
+  addProjects(2);
   // $('#skills').css({'margin-left': $(window).width() / 4});
+  $('#project1dot').addClass('activeDot');
 }
 
-// use this to detect screen size and layout changes
-/*
-$(window).resize(function(event) {
-  // console.log(event);
-  $('#skills').css({'margin-left': $(window).width() / 4});
-});
-*/
+// sets number of projects to be tracked
+function addProjects(number) {
+  for (var i = 1; i <= number; i++) {
+    $('#sliderTracker').append('<i class="fa fa-circle top-spacing left-spacing dot" style="color:black;" id="project' + i + 'dot"></i>');
+  }
+}
+
 
 main();
 
