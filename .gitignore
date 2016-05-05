@@ -1,4 +1,6 @@
 node_modules
 dist/bundle.js
 dist/snapshot.png
+dist/headlinesScreenshot.png
 src/assets/snapshot.png
+src/assets/headlinesScreenshot.png
