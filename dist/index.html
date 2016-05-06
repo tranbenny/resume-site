@@ -34,7 +34,7 @@
     <div class="container-fluid">
       <!-- HOME SECTION AND ABOUT ME  -->
       <div class="section" id="home" style="padding-bottom:30px;">
-          <h1 class="center" id="name">BENNY TRAN</h1>
+          <h1 class="center" id="name" style="font-size:80px; display:none;">BENNY TRAN</h1>
           <p class="lead center" id="tagline">
             Specializing in full-stack web development,
             android development, and data programming
@@ -55,40 +55,44 @@
       <!-- EXPERIENCE, EDUCATION -->
       <div class="row section">
         <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
-          <p style="font-size:36px;">WORK EXPERIENCE</p>
+          <p style="font-family:futura; font-size:36px;">WORK EXPERIENCE</p>
           <!-- list of job types -->
           <div style="margin-top:65px;" id="accordian">
             <!-- TODO: fix layout of words and accordian icon -->
             <div class="row">
                 <div class="jobHeader">
-                  <h3 style="display:inline-block; margin-left:20px;">Undergraduate Research Assistant</h3>
+                  <h3 style="display:inline-block; margin-left:20px;">UNDERGRADUATE RESEARCH <br />ASSISTANT</h3>
                   <i class="fa fa-angle-left fa-2x rotateButton" aria-hidden="true" id="radiation"
                   style="margin-top:20px; float:right; margin-right:10px;"></i>
-                  <h4 style="margin-left:20px; margin-bottom:20px">
-                    University of Washington Department of Radiation Oncology
-                  </h4>
+                  <p style="margin-left:20px; margin-bottom:20px">
+                    UNIVERSITY OF WASHINGTON DEPARTMENT OF RADIATION ONCOLOGY
+                  </p>
                 </div>
                 <div id="radiationSection" class="jobRole">
                   <p>Seattle, WA</p>
                   <p>November 2015 - Present</p>
                   <p>Python, Matlab</p>
                   <p>Studying how linear optimization techniques can improve cancer radiation treatments</p>
-                  <p>Improved validity of data manipulation with error responses and tests for geometrical beam orientations and radiation dosages</p>
+                  <p>Reduced runtime and number of iterations in data processing programs</p>
+                  <p>Improved data manipulation scripts with error responses and tests for geometrical beam orientations/radiation dosages</p>
+                  <p>Enhanced data reports by creating program that generates heat maps of high intensity radiation areas</p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="jobHeader top-spacing">
-                  <h3 style="display:inline-block; margin-left:20px;">Web Developer Intern</h3>
+                  <h3 style="display:inline-block; margin-left:20px;">WEB DEVELOPER INTERN</h3>
                   <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true" id="developer"
                   style="float:right; margin-top:20px; margin-right:10px;"></i>
-                  <h4 style="margin-left:20px; margin-bottom:20px;">CashVue</h4>
+                  <p style="margin-left:20px; margin-bottom:20px;">CASHVUE</p>
                 </div>
                 <div id="developerSection" class="jobRole">
                   <p>Seattle, WA</p>
                   <p>October 2015 - Present</p>
-                  <p>Tools: Angular, React, Node, Bootstrap, Express, D3, MongoDB</p>
+                  <p>ES6, Angular, React, Node, Bootstrap, Express, D3, MongoDB</p>
                   <p>Led front-end development of dashboard project, improved process with suggestions of new development and build tools</p>
+                  <p>Redesigned UI's to improve responsiveness in web applications</p>
+                  <p>Integrated all components of app with API testing, unit tests, and managing the overall project structure with all team members</p>
                 </div>
             </div>
 
@@ -96,41 +100,39 @@
         </div>
 
         <div id="education" class="col-md-6 col-sm-12 section" style="padding-left:70px;">
-          <p style="font-size:36px;">EDUCATION</p>
+          <p style="font-size:36px; font-family:futura;">EDUCATION</p>
             <div style="margin-top:65px;">
                 <div class="jobHeader">
-                  <h3 style="display:inline-block; margin-left:20px;">Bachelor of Science: Biochemistry</h3>
+                  <h3 style="display:inline-block; margin-left:20px;">BACHELOR OF SCIENCE:<br />BIOCHEMISTRY</h3>
                   <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true"
                       id='coursework' style="float:right; margin-top:20px; margin-right:10px;"></i>
-                  <h4 style="margin-left:20px;">Minors: Chemistry, Math</h4>
-                  <h4 style="margin-left:20px;">University of Washington - Seattle, WA</h4>
-                  <h4 style="margin-left:20px; margin-bottom:20px;">Expected Graduation: June 2017</h4>
+                  <h4 style="margin-left:20px;">MINORS: CHEMISTRY, MATH</h4>
+                  <h4 style="margin-left:20px;">UNIVERSITY OF WASHINGTON - SEATTLE, WA</h4>
+                  <h4 style="margin-left:20px; margin-bottom:20px;">EXPECTED GRADUATION: JUNE 2017</h4>
                 </div>
             </div>
 
             <!-- turn this into an accordian -->
             <div id="courseworkSection" class="jobRole">
-              <h4>Coursework</h4>
-              <ul>
-                <li>computer programming</li>
-                <li>algorithms and compuational complexity</li>
-                <li>data structures</li>
-                <li>database systems</li>
-                <li>Artificial Intelligence</li>
-              </ul>
+              <h4>COURSEWORK</h4>
+              <p>computer programming</p>
+              <p>algorithms and compuational complexity</p>
+              <p>data structures</p>
+              <p>database systems</p>
+              <p>Artificial Intelligence</p>
             </div>
         </div>
       </div>
 
       <!-- SKILLS -->
       <div id="skills" class="row section center">
-        <p style="font-size:36px;">SKILLS</p>
+        <p style="font-size:36px; font-family:futura;">SKILLS</p>
         <div class="col-md-10 col-md-offset-1 col-lg-12 col-sm-12" style="margin-top:30px;">
           <div class="col-md-3 col-sm-12" style="height:400px;">
             <div class="skill-icon">
               <i class="fa fa-code fa-4x" aria-hidden="true" id="language"></i>
             </div>
-            <h4>Programming Languages</h4>
+            <h4>PROGRAMMING LANGUAGES</h4>
             <div id="languageSkills">
               <h4 class="top-spacing skill-item">Java</h4>
               <h4 class="skill-item">Python</h4>
@@ -143,13 +145,13 @@
             <div class="skill-icon">
               <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
             </div>
-            <h4>Android Programming</h4>
+            <h4>ANDROID PROGRAMMING</h4>
           </div>
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
               <i class="fa fa-file-code-o fa-5x" aria-hidden="true" id="web"></i>
             </div>
-            <h4>Web Development/Frameworks</h4>
+            <h4>WEB DEVELOPMENT/ <br />FRAMEWORKS</h4>
             <div id="webSkills">
               <h4 class="skill-item top-spacing">React</h4>
               <h4 class="skill-item">Angular</h4>
@@ -164,7 +166,7 @@
             <div class="skill-icon">
               <i class="fa fa-database fa-5x" aria-hidden="true" id="data"></i>
             </div>
-            <h4>Databases/Data Analysis</h4>
+            <h4>DATABASES/DATA ANALYSIS</h4>
             <div id="dataSkills">
               <h4 class="skill-item top-spacing">MySQL</h4>
               <h4 class="top-spacing">Familiar with:</h4>
@@ -179,14 +181,14 @@
 
       <!-- PROJECTS -->
       <div id="projects" class="center section row">
-        <p style="font-size:36px;">PROJECTS</p>
+        <p style="font-size:36px; font-family:futura;">PROJECTS</p>
         <div class="row">
           <div class="col-md-1 top-spacing arrowCol">
             <i class="fa fa-caret-left fa-5x sliderArrow" id="left"></i>
           </div>
           <div class="col-md-10 col-lg-10 col-sm-12 top-spacing">
             <div style="height:500px;">
-              <div style="height:100%" id="project1">
+              <div style="height:100%" class="projectContainer" id="project1">
                 <div class="row" style="height:100%">
                   <div class="col-md-7" style="height:100%;">
                     <img src="snapshot.png" style="height:100%;">
@@ -205,17 +207,17 @@
                   </div>
                 </div>
               </div>
-              <div style="height:100%; display:none;" id="project2">
-                <div class="row" style="width:100%; height:80%;">
-                  <img src="headlinesScreenshot.png" style="height:100%">
+              <div style="height:100%; display:none;" class="row projectContainer" id="project2">
+                <div class="row" style="height:100%;">
+                  <img src="headlinesScreenshot.png" style="height:80%">
+                  <div style="text-align:left;">
+                    <h3>Global Headlines Data Visualization</h3>
+                    <p>Tools: Python, Flask, MySQL, Angular, D3</p>
+                    <p><a href="https://github.com/tranbenny/WorldHeadlinesDataVisual">Source Code</a></p>
+                    <p>Highights the countries that recieve the most attention from major news sources</p>
+                  </div>
                 </div>
 
-                <div class="row" style="width:100%; text-align:left;">
-                  <h3>Global Headlines Data Visualization</h3>
-                  <p>Tools: Python, Flask, MySQL, Angular, D3</p>
-                  <p><a href="https://github.com/tranbenny/WorldHeadlinesDataVisual">Source Code</a></p>
-                  <p>Features: Highights the countries that recieve the most attention from major news sources</p>
-                </div>
               </div>
             </div>
             <div id="sliderTracker" class="top-spacing"></div>
@@ -240,11 +242,11 @@
         -->
       </div>
 
-      <div id="footer" class="row center" style="background-color:#000000; color:white;">
+      <div id="footer" class="row center" style="font-family:futura; background-color:#000000; color:white;">
         <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
         <p>BASED IN SEATTLE, WA</p>
         <p>PHONE: (206) 326-9583</p>
-        <p style="margin-bottom:20px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
+        <p style="margin-bottom:40px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
       </div>
 
     </div>

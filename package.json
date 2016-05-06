@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "jquery-ui": "^1.10.5"
   },
   "devDependencies": {
     "browser-sync": "^2.12.5",

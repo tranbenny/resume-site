@@ -13,6 +13,8 @@ function main() {
   initializePage();
   hoverAnimations();
   showHideSkills();
+
+  $('#name').fadeIn(2000);
   // console.log($(window).width());
 }
 
@@ -59,19 +61,26 @@ function scrollToSection(event) {
 function addButtonFunctions() {
   // add scrolling function to all navigation items in bar
   $('.nav-item').on('click', scrollToSection);
-  // adds rotation button to icons and toggles description sections
-  // ISSUE: lags on coursework rotation, buttons not working
-  // TODO: change diagonal animation to vertical animation
+
   $('.rotateButton').on('click', function(event) {
     var targetId = event.target.id + "Section";
+    // console.log(event.target);
     if ($('#' + event.target.id).hasClass('rotate')) {
       $('#' + event.target.id).removeClass('rotate');
-      $('#' + targetId).hide({duration: 700});
+      // $('#' + targetId).hide({duration: 700});
+      $('#' + targetId).slideToggle(1000);
     } else {
       $('#' + event.target.id).addClass('rotate');
-      $('#' + targetId).show({duration: 700});
+      $('#' + targetId).slideToggle(1000);
     }
   });
+
+  $('.rotateButton').hover(function() {
+    $(this).css({'font-size': '3em', 'cursor':'pointer'});
+  }, function() {
+    $(this).css({'font-size': '2em', 'cursor':'default'});
+  });
+
 
   $(window).scroll(scrollingTab);
 }
@@ -165,17 +174,14 @@ function hoverAnimations() {
     });
 }
 
+// shows/hides the skills sections when button is clicked
 function showHideSkills() {
     $('.skill-icon').on('click', function(event) {
       var id = event.target.id;
       if ($(event.target).is('div')) {
         id = $(event.target).children()[0].id;
       }
-      if ($('#' + id + 'Skills').is(':hidden')) {
-        $('#' + id + 'Skills').show();
-      } else {
-        $("#" + id + 'Skills').hide();
-      }
+      $('#' + id + 'Skills').slideToggle(1000);
     });
 }
 

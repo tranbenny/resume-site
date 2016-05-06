@@ -2,6 +2,11 @@ body {
 
 }
 
+@font-face {
+  font-family: futura;
+  src: url(futura.ttf);
+}
+
 .center {
   text-align: center;
 }

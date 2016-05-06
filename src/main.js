@@ -2,6 +2,7 @@
 
 require('jquery');
 require('bootstrap');
+require('jquery-ui');
 
 // css files
 require('./css/navbar.css');
