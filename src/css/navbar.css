@@ -1,12 +1,23 @@
 #navbar p {
   margin-bottom: 0px;
+
   color: #4d4d4d;
+  /* color:white; */
+}
+/*
+#navbar {
+  background-color:#333333;
+  opacity:0.6;
+}*/
+
+#navbar-collapse-tabs {
+  transition-duration: 2s;
 }
 
 .active {
-  border-bottom: 5px solid red;
+  border-bottom: 5px solid #337ab7;
 }
 
 .active p {
-  color: red;
+  font-weight: bold;
 }

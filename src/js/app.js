@@ -5,13 +5,14 @@
 // global variables
 var current = $('#aboutLink'); // current section web page is at
 var dimensions = getSectionHeights(); // height dimensions for page section
-// create a global variable of the current project as well
+
 
 
 function main() {
   addButtonFunctions();
   initializePage();
   hoverAnimations();
+  showHideSkills();
   // console.log($(window).width());
 }
 
@@ -38,6 +39,13 @@ function setActiveTab(section) {
 function scrollToSection(event) {
   var section = event.target.innerText.toLowerCase().trim();
   setActiveTab(section);
+  // set appropriate navbar color
+  if (section === 'home') {
+    setNavInitialBackground();
+  } else {
+    setNavNextBackground();
+  }
+
   // temporarily removes scrolling function when button is clicked
   $(window).off('scroll', scrollingTab);
   $('html, body').animate({
@@ -79,9 +87,8 @@ function getSectionHeights() {
   return {
     about: navHeight,
     experience: navHeight + aboutHeight,
-    skills: navHeight + aboutHeight + experienceHeight,
-    projects: navHeight + aboutHeight + experienceHeight + skillsHeight,
-    additional: navHeight + aboutHeight + experienceHeight + skillsHeight + projectsHeight
+    skills: aboutHeight + experienceHeight - 100,
+    projects: aboutHeight + experienceHeight + skillsHeight - 100,
   };
 }
 
@@ -89,17 +96,42 @@ function getSectionHeights() {
 function scrollingTab(event) {
   event.preventDefault();
   var scroll = $(window).scrollTop();
-  if (scroll > dimensions.about && scroll < dimensions.experience) {
-    setActiveTab('about');
+  if (scroll >= 0 && scroll < dimensions.experience) {
+    setActiveTab('home');
+    // set navbar back to beginning
+    setNavInitialBackground();
+
   } else if (scroll > dimensions.experience && scroll < dimensions.skills) {
     setActiveTab('experience');
+    // set navbar to new one
+    setNavNextBackground();
   } else if (scroll > dimensions.skills && scroll < dimensions.projects) {
     setActiveTab('skills');
-  } else if (scroll > dimensions.projects && scroll < dimensions.additional) {
+  } else if (scroll > dimensions.projects) {
     setActiveTab('projects');
-  } else if (scroll > dimensions.additional) {
-    setActiveTab('additional');
   }
+}
+
+// TODO: SET ANIMATION FOR NAVBAR CHANGING
+function setNavInitialBackground() {
+  $('#navbar-collapse-tabs').css({
+    'background-color':'white',
+    'opacity':'1'
+  });
+  $('#navbar-collapse-tabs > ul > li > a').children().css({
+    'color':'#4d4d4d'
+  });
+}
+
+// TODO: SET ANIMATION FOR NAVBAR CHANGING
+function setNavNextBackground() {
+  $('#navbar-collapse-tabs').css({
+    'background-color':'#818181',
+    'opacity':'0.7'
+  });
+  $('#navbar-collapse-tabs > ul > li > a').children().css({
+    'color':'white'
+  });
 }
 
 // add hover animations to webpage
@@ -131,9 +163,20 @@ function hoverAnimations() {
     }, function() {
       $(this).css({'opacity':0.6, 'cursor':'default'});
     });
+}
 
-
-    // TODO: add opacity hovering to jobs, skills, and projects
+function showHideSkills() {
+    $('.skill-icon').on('click', function(event) {
+      var id = event.target.id;
+      if ($(event.target).is('div')) {
+        id = $(event.target).children()[0].id;
+      }
+      if ($('#' + id + 'Skills').is(':hidden')) {
+        $('#' + id + 'Skills').show();
+      } else {
+        $("#" + id + 'Skills').hide();
+      }
+    });
 }
 
 // hides and shows secitons on inital page load

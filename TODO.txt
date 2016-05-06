@@ -1,19 +1,22 @@
 TODO List:
 
-Content:
--
+Layout:
+- fix weird centering layouts
+- choose a better font for everything
 
 User Interaction:
 - update active tab style, DONE
 - Wrap courses, skills, work experience in accordian tags, DONE
 - add navigation menu for small screens
-  - need to add background styling and click functions for when the menu is collapsed
+  - need to add background styling and click functions for when the menu is collapsed, DONE
 - add link to paper resume
 - connect scrolling to active nav bar, DONE
-- create slider for project section
+- create slider for project section, DONE
 ISSUES:
 - fix navigation menu overlap, DONE
 - dont want active tab bouncing for the scrolling when button clicked, DONE
+- need to fix scrolling dimension
+- close small navigation menu bar when button is clicked
 
 Animations:
 - Scrolling animation for tabs, DONE
