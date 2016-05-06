@@ -26,6 +26,7 @@ body {
 .section {
   padding-top:70px;
   padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
 }
 
 .rotate {

@@ -4,8 +4,12 @@
 
 // global variables
 var current = $('#aboutLink'); // current section web page is at
+$('#home').height($(window).height());
+
 var dimensions = getSectionHeights(); // height dimensions for page section
 
+console.log($(window).height());
+console.log(dimensions.about);
 
 
 function main() {
@@ -39,6 +43,7 @@ function setActiveTab(section) {
 
 // handles scrolling animation
 function scrollToSection(event) {
+  event.preventDefault();
   var section = event.target.innerText.toLowerCase().trim();
   setActiveTab(section);
   // set appropriate navbar color
@@ -86,9 +91,10 @@ function addButtonFunctions() {
 }
 
 // calculates the starting height for all the specific sections of page
+// THE DIMENSIONS ARE OFF FOR THE SCROLLING
 function getSectionHeights() {
   var navHeight = $('#navbar').height();
-  var aboutHeight = $('#about').height();
+  var aboutHeight = $('#home').height();
   var experienceHeight = $('#experience').height();
   var skillsHeight = $('#skills').height();
   var projectsHeight = $('#projects').height();
@@ -96,8 +102,8 @@ function getSectionHeights() {
   return {
     about: navHeight,
     experience: navHeight + aboutHeight,
-    skills: aboutHeight + experienceHeight - 100,
-    projects: aboutHeight + experienceHeight + skillsHeight - 100,
+    skills: aboutHeight + experienceHeight - 300,
+    projects: aboutHeight + experienceHeight + skillsHeight - 300,
   };
 }
 
@@ -136,7 +142,7 @@ function setNavInitialBackground() {
 function setNavNextBackground() {
   $('#navbar-collapse-tabs').css({
     'background-color':'#818181',
-    'opacity':'0.7'
+    'opacity':'0.9'
   });
   $('#navbar-collapse-tabs > ul > li > a').children().css({
     'color':'white'

@@ -15,3 +15,4 @@ require('./css/skills.css');
 // app's js files
 require('./js/app.js');
 require('./js/projectSlider.js');
+require('./js/projectLoader.js');

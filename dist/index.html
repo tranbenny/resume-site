@@ -5,7 +5,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container-fluid" style="padding-left:0px;padding-right:0px;">
+  <div class="container" style="padding-left:0px;padding-right:0px;">
 
     <!-- NAVIGATION BAR -->
     <nav id="navbar" class="navbar navbar-fixed-top">
@@ -22,9 +22,9 @@
           <ul class="nav navbar-nav navbar-right" style="margin-right:25px;">
             <li id="homeLink" class="active nav-item"><a href="#home"><p class="lead">HOME</p></a></li>
             <li id="experienceLink" class="nav-item"><a href="#experience"><p class="lead">EXPERIENCE</p></a></li>
+            <li id="educationLink" class="nav-item"><a href="#education"><p class="lead">EDUCATION</p></a></li>
             <li id="skillsLink" class="nav-item"><a href="#skills"><p class="lead">SKILLS</p></a></li>
             <li id="projectsLink" class="nav-item"><a href="#projects"><p class="lead">PROJECTS</p></a></li>
-            <li id="educationLink" class="nav-item"><a href="#education"><p class="lead">EDUCATION</p></a></li>
           </ul>
         </div>
       </div>
@@ -57,7 +57,7 @@
         <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
           <p style="font-family:futura; font-size:36px;">WORK EXPERIENCE</p>
           <!-- list of job types -->
-          <div style="margin-top:65px;" id="accordian">
+          <div style="margin-top:20px;" id="accordian">
             <!-- TODO: fix layout of words and accordian icon -->
             <div class="row">
                 <div class="jobHeader">
@@ -101,7 +101,7 @@
 
         <div id="education" class="col-md-6 col-sm-12 section" style="padding-left:70px;">
           <p style="font-size:36px; font-family:futura;">EDUCATION</p>
-            <div style="margin-top:65px;">
+            <div style="margin-top:20px;">
                 <div class="jobHeader">
                   <h3 style="display:inline-block; margin-left:20px;">BACHELOR OF SCIENCE:<br />BIOCHEMISTRY</h3>
                   <i class="fa fa-angle-left fa-2x left-spacing rotateButton" aria-hidden="true"
@@ -127,25 +127,33 @@
       <!-- SKILLS -->
       <div id="skills" class="row section center">
         <p style="font-size:36px; font-family:futura;">SKILLS</p>
-        <div class="col-md-10 col-md-offset-1 col-lg-12 col-sm-12" style="margin-top:30px;">
+        <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:30px;">
           <div class="col-md-3 col-sm-12" style="height:400px;">
             <div class="skill-icon">
               <i class="fa fa-code fa-4x" aria-hidden="true" id="language"></i>
             </div>
             <h4>PROGRAMMING LANGUAGES</h4>
             <div id="languageSkills">
+              <!--
               <h4 class="top-spacing skill-item">Java</h4>
               <h4 class="skill-item">Python</h4>
               <h4 class="skill-item">JavaScript/ES6</h4>
               <h4 class="skill-item">Matlab</h4>
-              <h4 class="skill-item">SQL</h4>
+              <h4 class="skill-item">SQL</h4>-->
+              <p class="top-spacing lead">Java</p>
+              <p class="lead">JavaScript/ES6</p>
+              <p class="lead">Python</p>
+              <p class="lead">Matlab</p>
+              <p class="lead">SQL</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
               <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
             </div>
-            <h4>ANDROID PROGRAMMING</h4>
+            <h4>MOBILE DEVELOPMENT</h4>
+            <p class="top-spacing lead">Android SDK</p>
+            <p class="lead">junit</p>
           </div>
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
@@ -153,6 +161,7 @@
             </div>
             <h4>WEB DEVELOPMENT/ <br />FRAMEWORKS</h4>
             <div id="webSkills">
+              <!--
               <h4 class="skill-item top-spacing">React</h4>
               <h4 class="skill-item">Angular</h4>
               <h4 class="skill-item">Bootstrap</h4>
@@ -160,6 +169,13 @@
               <h4 class="skill-item">Express</h4>
               <h4 class="skill-item">Flask</h4>
               <h4 class="skill-item">junit</h4>
+              -->
+              <p class="top-spacing lead">React</h4>
+              <p class="lead">Angular</p>
+              <p class="lead">Bootstrap</p>
+              <p class="lead">jQuery</p>
+              <p class="lead">Express</p>
+              <p class="lead">Flask</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-12">
@@ -168,12 +184,20 @@
             </div>
             <h4>DATABASES/DATA ANALYSIS</h4>
             <div id="dataSkills">
+              <!--
               <h4 class="skill-item top-spacing">MySQL</h4>
               <h4 class="top-spacing">Familiar with:</h4>
               <h4 class="skill-item">MongoDB/NoSQL</h4>
               <h4 class="skill-item">pandas</h4>
               <h4 class="skill-item">D3</h4>
               <h4 class="skill-item">sci-kit learn</h4>
+              -->
+              <p class="top-spacing lead">MySQL</p>
+              <h4 class="top-spacing">FAMILIAR WITH:</h4>
+              <p class="lead">MongoDB</p>
+              <p class="lead">pandas</p>
+              <p class="lead">D3</p>
+              <p class="lead">sci-kit learn</p>
             </div>
           </div>
         </div>
@@ -182,7 +206,56 @@
       <!-- PROJECTS -->
       <div id="projects" class="center section row">
         <p style="font-size:36px; font-family:futura;">PROJECTS</p>
+        <!-- SMALL PREVIEW -->
+        <!-- BIG ONE -->
+        <div style="display:flex; flex-direction:row; margin-top:20px;">
+          <div class="projectContainer col-sm-12" id="project1" style="height:300px; background-color:gray; width:450px;">
+            <div class="row" style="height: 100%">
+              <div class="col-md-7" style="height:100%;">
+                <img src="snapshot.png" style="height:100%">
+              </div>
+              <div class="col-md-5" style="text-align:left; height:100px;">
+                <h3>Yelp Agenda Planner Android App</h3>
+                <div id="specifics1" style="display:none;">
+                  <p>Tools: Java, Android SDK, Firebase</p>
+                  <p><a href="https://github.com/tranbenny/Day-Planner-Android-App">Source Code</a></p>
+                  <p>Features:</p>
+                  <ul>
+                    <li><p>Builds Custom Day Plan based on Yelp Search Results</p></li>
+                    <li><p>Customizing a Blank plan from search results</p></li>
+                    <li><p>Sending Plan to other users and creating groups</p></li>
+                    <li><p>Group Chat</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="project2"
+          class="col-sm-12" style="padding:0px; border-left:1px solid black; height:300px; background-color:gray; width:450px;">
+            <img src="headlinesScreenshot.png" style="height:100%; width:100%">
+          </div>
+
+
+        </div>
+        <!--
+        <div style="height:100%" class="row projectContainer" id="project2">
+          <div class="row" style="height:100%;">
+            <img src="headlinesScreenshot.png" style="height:80%">
+            <div style="text-align:left;">
+              <h3>Global Headlines Data Visualization</h3>
+              <p>Tools: Python, Flask, MySQL, Angular, D3</p>
+              <p><a href="https://github.com/tranbenny/WorldHeadlinesDataVisual">Source Code</a></p>
+              <p>Highights the countries that recieve the most attention from major news sources</p>
+            </div>
+          </div>
+        -->
+
+
+
+
+        <!--
         <div class="row">
+
           <div class="col-md-1 top-spacing arrowCol">
             <i class="fa fa-caret-left fa-5x sliderArrow" id="left"></i>
           </div>
@@ -222,10 +295,12 @@
             </div>
             <div id="sliderTracker" class="top-spacing"></div>
           </div>
+
           <div class="col-md-1 top-spacing arrowCol">
             <i class="fa fa-caret-right fa-5x sliderArrow" id="right"></i>
           </div>
         </div>
+        -->
         <!--
         <div class="row">
           <div class="col-md-6">
@@ -241,17 +316,16 @@
         </div>
         -->
       </div>
-
-      <div id="footer" class="row center" style="font-family:futura; background-color:#000000; color:white;">
-        <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
-        <p>BASED IN SEATTLE, WA</p>
-        <p>PHONE: (206) 326-9583</p>
-        <p style="margin-bottom:40px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
-      </div>
-
     </div>
+  </div>
 
+  <!-- FOOTER -->
 
+  <div id="footer" class="row center container-fluid" style="font-family:futura; background-color:#000000; color:white;">
+    <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
+    <p>BASED IN SEATTLE, WA</p>
+    <p>PHONE: (206) 326-9583</p>
+    <p style="margin-bottom:40px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
   </div>
   <script src="bundle.js"></script>
 </body>
