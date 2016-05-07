@@ -32,7 +32,7 @@
 
     <!-- RESUME CONTENT -->
     <div class="container-fluid">
-      <!-- HOME SECTION AND ABOUT ME  -->
+      <!-- HOME SECTION -->
       <div class="section" id="home" style="padding-bottom:30px;">
           <h1 class="center" id="name" style="font-size:80px; display:none;">BENNY TRAN</h1>
           <p class="lead center" id="tagline">
@@ -54,11 +54,10 @@
 
       <!-- EXPERIENCE, EDUCATION -->
       <div class="row section">
-        <div id="experience" class="col-md-6 col-sm-12 section" style="padding-left:80px;">
-          <p style="font-family:futura; font-size:36px;">WORK EXPERIENCE</p>
-          <!-- list of job types -->
+        <div id="experience" class="col-md-6 col-sm-12" style="padding-left:80px;">
+          <p style="font-family:futura; font-size:36px; display:none;" id="workHeader">WORK EXPERIENCE</p>
+          <!-- LIST OF JOB TYPES -->
           <div style="margin-top:20px;" id="accordian">
-            <!-- TODO: fix layout of words and accordian icon -->
             <div class="row">
                 <div class="jobHeader">
                   <h3 style="display:inline-block; margin-left:20px;">UNDERGRADUATE RESEARCH <br />ASSISTANT</h3>
@@ -99,8 +98,8 @@
           </div>
         </div>
 
-        <div id="education" class="col-md-6 col-sm-12 section" style="padding-left:70px;">
-          <p style="font-size:36px; font-family:futura;">EDUCATION</p>
+        <div id="education" class="col-md-6 col-sm-12" style="padding-left:70px;">
+          <p style="font-size:36px; font-family:futura; display:none;" id="educationHeader">EDUCATION</p>
             <div style="margin-top:20px;">
                 <div class="jobHeader">
                   <h3 style="display:inline-block; margin-left:20px;">BACHELOR OF SCIENCE:<br />BIOCHEMISTRY</h3>
@@ -112,7 +111,7 @@
                 </div>
             </div>
 
-            <!-- turn this into an accordian -->
+            <!-- RELEVANT COURSEWORK -->
             <div id="courseworkSection" class="jobRole">
               <h4>COURSEWORK</h4>
               <p>computer programming</p>
@@ -127,6 +126,7 @@
       <!-- SKILLS -->
       <div id="skills" class="row section center">
         <p style="font-size:36px; font-family:futura;">SKILLS</p>
+        <div style="width:80px; height:1px; background-color:#337ab7; margin-left:auto; margin-right:auto;"></div>
         <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:30px;">
           <div class="col-md-3 col-sm-12" style="height:400px;">
             <div class="skill-icon">
@@ -134,26 +134,22 @@
             </div>
             <h4>PROGRAMMING LANGUAGES</h4>
             <div id="languageSkills">
-              <!--
-              <h4 class="top-spacing skill-item">Java</h4>
-              <h4 class="skill-item">Python</h4>
-              <h4 class="skill-item">JavaScript/ES6</h4>
-              <h4 class="skill-item">Matlab</h4>
-              <h4 class="skill-item">SQL</h4>-->
-              <p class="top-spacing lead">Java</p>
-              <p class="lead">JavaScript/ES6</p>
-              <p class="lead">Python</p>
-              <p class="lead">Matlab</p>
-              <p class="lead">SQL</p>
+              <p class="top-spacing lead skill-item" id="java">Java</p>
+              <p class="lead skill-item" id="javascript">JavaScript/ES6</p>
+              <p class="lead skill-item" id="python">Python</p>
+              <p class="lead skill-item" id="matlab">Matlab</p>
+              <p class="lead skill-item" id="sql">SQL</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
-              <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+              <i class="fa fa-mobile fa-5x" aria-hidden="true" id="mobile"></i>
             </div>
             <h4>MOBILE DEVELOPMENT</h4>
-            <p class="top-spacing lead">Android SDK</p>
-            <p class="lead">junit</p>
+            <div id="mobileSkills">
+              <p class="top-spacing lead skill-item" id="android">Android SDK</p>
+              <p class="lead skill-item" id="junit">junit</p>
+            </div>
           </div>
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
@@ -161,21 +157,12 @@
             </div>
             <h4>WEB DEVELOPMENT/ <br />FRAMEWORKS</h4>
             <div id="webSkills">
-              <!--
-              <h4 class="skill-item top-spacing">React</h4>
-              <h4 class="skill-item">Angular</h4>
-              <h4 class="skill-item">Bootstrap</h4>
-              <h4 class="skill-item">jQuery</h4>
-              <h4 class="skill-item">Express</h4>
-              <h4 class="skill-item">Flask</h4>
-              <h4 class="skill-item">junit</h4>
-              -->
-              <p class="top-spacing lead">React</h4>
-              <p class="lead">Angular</p>
-              <p class="lead">Bootstrap</p>
-              <p class="lead">jQuery</p>
-              <p class="lead">Express</p>
-              <p class="lead">Flask</p>
+              <p class="top-spacing lead skill-item" id="react">React</h4>
+              <p class="lead skill-item" id="angular">Angular</p>
+              <p class="lead skill-item" id="bootstrap">Bootstrap</p>
+              <p class="lead skill-item" id="jquery">jQuery</p>
+              <p class="lead skill-item" id="express">Express</p>
+              <p class="lead skill-item" id="flask">Flask</p>
             </div>
           </div>
           <div class="col-md-3 col-sm-12">
@@ -184,20 +171,12 @@
             </div>
             <h4>DATABASES/DATA ANALYSIS</h4>
             <div id="dataSkills">
-              <!--
-              <h4 class="skill-item top-spacing">MySQL</h4>
-              <h4 class="top-spacing">Familiar with:</h4>
-              <h4 class="skill-item">MongoDB/NoSQL</h4>
-              <h4 class="skill-item">pandas</h4>
-              <h4 class="skill-item">D3</h4>
-              <h4 class="skill-item">sci-kit learn</h4>
-              -->
-              <p class="top-spacing lead">MySQL</p>
+              <p class="top-spacing lead skill-item" id="mysql">MySQL</p>
               <h4 class="top-spacing">FAMILIAR WITH:</h4>
-              <p class="lead">MongoDB</p>
-              <p class="lead">pandas</p>
-              <p class="lead">D3</p>
-              <p class="lead">sci-kit learn</p>
+              <p class="lead skill-item" id="mongodb">MongoDB</p>
+              <p class="lead skill-item" id="pandas">pandas</p>
+              <p class="lead skill-item" id="d3">D3</p>
+              <p class="lead skill-item" id="scikitlearn">sci-kit learn</p>
             </div>
           </div>
         </div>
@@ -206,33 +185,39 @@
       <!-- PROJECTS -->
       <div id="projects" class="center section row">
         <p style="font-size:36px; font-family:futura;">PROJECTS</p>
-        <!-- SMALL PREVIEW -->
-        <!-- BIG ONE -->
-        <div style="display:flex; flex-direction:row; margin-top:20px;">
-          <div class="projectContainer col-sm-12" id="project1" style="height:300px; background-color:gray; width:450px;">
+        <div style="display:flex; flex-direction:row; margin-top:40px;">
+          <div class="projectContainer col-sm-12" id="project1" style="height:300px; width:450px;">
             <div class="row" style="height: 100%">
               <div class="col-md-7" style="height:100%;">
-                <img src="snapshot.png" style="height:100%">
+                <img src="snapshot.png" style="height:100%; margin-left:90px;" alt="">
+                <p class="lead" style="display:none; color:white; font-size:30px; position:absolute; top:70px; top:100px; width:450px;">HELLO WORLD</p>
               </div>
-              <div class="col-md-5" style="text-align:left; height:100px;">
-                <h3>Yelp Agenda Planner Android App</h3>
-                <div id="specifics1" style="display:none;">
-                  <p>Tools: Java, Android SDK, Firebase</p>
-                  <p><a href="https://github.com/tranbenny/Day-Planner-Android-App">Source Code</a></p>
-                  <p>Features:</p>
+              <div class="col-md-5" id="specifics1" style="display:none; text-align:left; height:100px;">
+                <h3>Plan the Perfect Day</h3>
+                <div>
+                  <h4>Tools: Java, Android SDK, Firebase</h4>
+                  <h4><a href="https://github.com/tranbenny/Day-Planner-Android-App">Source Code</a></h4>
+                  <h4>Features:</h4>
                   <ul>
-                    <li><p>Builds Custom Day Plan based on Yelp Search Results</p></li>
-                    <li><p>Customizing a Blank plan from search results</p></li>
-                    <li><p>Sending Plan to other users and creating groups</p></li>
-                    <li><p>Group Chat</p></li>
+                    <li><h4>Builds Custom Day Plan based on Yelp Search Results</h4></li>
+                    <li><h4>Customizing a Blank plan from search results</h4></li>
+                    <li><h4>Sending Plan to other users and creating groups</h4></li>
+                    <li><h4>Group Chat</h4></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div id="project2"
-          class="col-sm-12" style="padding:0px; border-left:1px solid black; height:300px; background-color:gray; width:450px;">
-            <img src="headlinesScreenshot.png" style="height:100%; width:100%">
+          <div id="project2" class="col-sm-12 projectContainer" style="padding:0px; height:300px; width:450px;">
+            <div id="headlinesImage" class="col-md-10" style="height:100%; width:100%;">
+              <img src="headlinesScreenshot.png" style="height:100%; width:100%">
+            </div>
+            <div class="col-md-2" id="specifics2" style="text-align:left;">
+              <h3>Global Headlines Data Visualization</h3>
+              <h4>Tools: Python, Flask, MySQL, Angular, D3</h4>
+              <p><a href="https://github.com/tranbenny/WorldHeadlinesDataVisual">Source Code</a></p>
+              <p style="font-size:17px;">Highights the countries that recieve the most attention from major news sources</p>
+            </div>
           </div>
 
 
@@ -301,26 +286,12 @@
           </div>
         </div>
         -->
-        <!--
-        <div class="row">
-          <div class="col-md-6">
-            <div id="project1" class="project">
-              <h3 id="project1Title">Yelp Agenda Planner</h3>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div id="project2" class="project">
-              <h3 id="project2Title">Global Headlines Visualization</h3>
-            </div>
-          </div>
-        </div>
-        -->
+
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-
   <div id="footer" class="row center container-fluid" style="font-family:futura; background-color:#000000; color:white;">
     <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
     <p>BASED IN SEATTLE, WA</p>

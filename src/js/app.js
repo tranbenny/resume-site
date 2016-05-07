@@ -1,24 +1,19 @@
-// main app file to control user interaction on page
+// main app file to main page scrolling, navbar animations/interactions
 'use strict';
 (function() {
 
 // global variables
 var current = $('#aboutLink'); // current section web page is at
 $('#home').height($(window).height());
-
 var dimensions = getSectionHeights(); // height dimensions for page section
-
-console.log($(window).height());
-console.log(dimensions.about);
 
 
 function main() {
   addButtonFunctions();
   initializePage();
   hoverAnimations();
-  showHideSkills();
 
-  $('#name').fadeIn(2000);
+  // $('#name').fadeIn(2000);
   // console.log($(window).width());
 }
 
@@ -62,31 +57,10 @@ function scrollToSection(event) {
   });
 }
 
-// all click interactions on webpage
+// all click interactions for navbar
 function addButtonFunctions() {
   // add scrolling function to all navigation items in bar
   $('.nav-item').on('click', scrollToSection);
-
-  $('.rotateButton').on('click', function(event) {
-    var targetId = event.target.id + "Section";
-    // console.log(event.target);
-    if ($('#' + event.target.id).hasClass('rotate')) {
-      $('#' + event.target.id).removeClass('rotate');
-      // $('#' + targetId).hide({duration: 700});
-      $('#' + targetId).slideToggle(1000);
-    } else {
-      $('#' + event.target.id).addClass('rotate');
-      $('#' + targetId).slideToggle(1000);
-    }
-  });
-
-  $('.rotateButton').hover(function() {
-    $(this).css({'font-size': '3em', 'cursor':'pointer'});
-  }, function() {
-    $(this).css({'font-size': '2em', 'cursor':'default'});
-  });
-
-
   $(window).scroll(scrollingTab);
 }
 
@@ -115,9 +89,10 @@ function scrollingTab(event) {
     setActiveTab('home');
     // set navbar back to beginning
     setNavInitialBackground();
-
   } else if (scroll > dimensions.experience && scroll < dimensions.skills) {
     setActiveTab('experience');
+    $('#workHeader').fadeIn(500);
+    $('#educationHeader').fadeIn(500);
     // set navbar to new one
     setNavNextBackground();
   } else if (scroll > dimensions.skills && scroll < dimensions.projects) {
@@ -165,31 +140,8 @@ function hoverAnimations() {
       $('#project2Title').css({'font-size':24, 'opacity': 1});
     });
 
-
-    // skills icons hover function, set opacity
-    $('.skill-icon').hover(function() {
-      $(this).css({'opacity': 0.5, 'cursor' :'pointer'});
-    }, function() {
-      $(this).css({'opacity': 1});
-    });
-
-    $('.sliderArrow').hover(function() {
-      $(this).css({'opacity':1, 'cursor':'pointer'});
-    }, function() {
-      $(this).css({'opacity':0.6, 'cursor':'default'});
-    });
 }
 
-// shows/hides the skills sections when button is clicked
-function showHideSkills() {
-    $('.skill-icon').on('click', function(event) {
-      var id = event.target.id;
-      if ($(event.target).is('div')) {
-        id = $(event.target).children()[0].id;
-      }
-      $('#' + id + 'Skills').slideToggle(1000);
-    });
-}
 
 // hides and shows secitons on inital page load
 function initializePage() {
@@ -198,16 +150,6 @@ function initializePage() {
   $('#developerSection').hide();
   $('#courseworkSection').hide();
 
-  addProjects(2);
-  // $('#skills').css({'margin-left': $(window).width() / 4});
-  $('#project1dot').addClass('activeDot');
-}
-
-// sets number of projects to be tracked
-function addProjects(number) {
-  for (var i = 1; i <= number; i++) {
-    $('#sliderTracker').append('<i class="fa fa-circle top-spacing left-spacing dot" style="color:black;" id="project' + i + 'dot"></i>');
-  }
 }
 
 

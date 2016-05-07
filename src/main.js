@@ -15,4 +15,7 @@ require('./css/skills.css');
 // app's js files
 require('./js/app.js');
 require('./js/projectSlider.js');
-require('./js/projectLoader.js');
+require('./js/experienceInteractions.js');
+require('./js/homeInteractions.js');
+require('./js/skillsInteractions.js');
+require('./js/projectInteractions.js');
