@@ -1,13 +1,13 @@
 TODO List:
 
 Layout:
-- fix weird centering layouts
-- choose a better font for everything
+- fix weird centering layouts, DONE
+- choose a better font for everything, DONE 
 
 User Interaction:
 - update active tab style, DONE
 - Wrap courses, skills, work experience in accordian tags, DONE
-- add navigation menu for small screens
+- add navigation menu for small screens, DONE
   - need to add background styling and click functions for when the menu is collapsed, DONE
 - add link to paper resume
 - connect scrolling to active nav bar, DONE
@@ -21,7 +21,7 @@ ISSUES:
 Animations:
 - Scrolling animation for tabs, DONE
 - fade in animations for initial page load
-- add rotate animation for projects section, DONE  add hover icons
+- add rotate animation for projects section, DONE  add hover icons, DONE
 ISSUES:
 - fix upwards scrolling back to about section, DONE
 - scrolling animation broke, need to fix

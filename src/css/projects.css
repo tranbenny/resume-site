@@ -14,12 +14,16 @@
   align-items: center;
 }
 
-#project1 {
-
+#project2Title {
+  font-family:Helvetica;
+  color:white;
+  background-color:#337ab7;
 }
 
-#project2 {
-
+#project1Title {
+  font-family:Helvetica;
+  color:white;
+  background-color:#337ab7;
 }
 
 .arrowCol {

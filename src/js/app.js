@@ -5,16 +5,20 @@
 // global variables
 var current = $('#aboutLink'); // current section web page is at
 $('#home').height($(window).height());
+// console.log($('#home').height());
 var dimensions = getSectionHeights(); // height dimensions for page section
+// console.log(dimensions);
 
 
 function main() {
   addButtonFunctions();
   initializePage();
-  hoverAnimations();
 
-  // $('#name').fadeIn(2000);
-  // console.log($(window).width());
+  console.log($('#skills').offset().top);
+  console.log(dimensions);
+
+
+
 }
 
 // sets passed tab as the active tab for navbar tab highlighting
@@ -49,7 +53,9 @@ function scrollToSection(event) {
   }
 
   // temporarily removes scrolling function when button is clicked
+  // THE SCROLLING ANIMATION IS OFF FOR THE EXPERIENCE SECTION
   $(window).off('scroll', scrollingTab);
+  console.log($('#' + section).offset());
   $('html, body').animate({
     scrollTop: $('#' + section).offset().top
   }, 1000, function() {
@@ -66,18 +72,26 @@ function addButtonFunctions() {
 
 // calculates the starting height for all the specific sections of page
 // THE DIMENSIONS ARE OFF FOR THE SCROLLING
+// THIS IS FOR THE SCROLLING
 function getSectionHeights() {
   var navHeight = $('#navbar').height();
   var aboutHeight = $('#home').height();
+  // console.log(aboutHeight);
   var experienceHeight = $('#experience').height();
+  // console.log(experienceHeight);
   var skillsHeight = $('#skills').height();
+  // console.log($('#skills').offset().top);
+  // console.log(navHeight + aboutHeight + experienceHeight);
   var projectsHeight = $('#projects').height();
+  // console.log(projectsHeight);
   var additionalHeight = $('#additonal').height();
   return {
     about: navHeight,
-    experience: navHeight + aboutHeight,
-    skills: aboutHeight + experienceHeight - 300,
-    projects: aboutHeight + experienceHeight + skillsHeight - 300,
+    experience: aboutHeight + navHeight,
+    // skills: aboutHeight + navHeight + experienceHeight,
+    // projects: aboutHeight + experienceHeight + skillsHeight + navHeight,
+    skills: $('#skills').offset().top,
+    projects: $('#projects').offset().top
   };
 }
 
@@ -85,20 +99,30 @@ function getSectionHeights() {
 function scrollingTab(event) {
   event.preventDefault();
   var scroll = $(window).scrollTop();
-  if (scroll >= 0 && scroll < dimensions.experience) {
+  // console.log(scroll);
+  if (scroll >= 0 && scroll < $('#experience').offset().top - 50) {
+    console.log('ON ABOUT PAGE');
     setActiveTab('home');
     // set navbar back to beginning
     setNavInitialBackground();
-  } else if (scroll > dimensions.experience && scroll < dimensions.skills) {
+  }
+  if (scroll > $('#experience').offset().top - 50 && scroll < $('#skills').offset().top - 50) {
     setActiveTab('experience');
+    console.log('ON EXPERIENCE PAGE');
     $('#workHeader').fadeIn(500);
     $('#educationHeader').fadeIn(500);
     // set navbar to new one
     setNavNextBackground();
-  } else if (scroll > dimensions.skills && scroll < dimensions.projects) {
+  }
+  if (scroll > $('#skills').offset().top - 50 && scroll < $('#projects').offset().top - 50) {
     setActiveTab('skills');
-  } else if (scroll > dimensions.projects) {
+    console.log('ON SKILLS PAGE');
+    setNavNextBackground();
+  }
+  if (scroll > $('#projects').offset().top - 50) {
     setActiveTab('projects');
+    console.log('ON PROJECTS PAGE');
+    setNavNextBackground();
   }
 }
 
@@ -123,25 +147,6 @@ function setNavNextBackground() {
     'color':'white'
   });
 }
-
-// add hover animations to webpage
-function hoverAnimations() {
-    // TODO: add click function
-    $('#project1').hover(function() {
-      $('#project1Title').css({'font-size':38, 'opacity':0.5});
-    }, function() {
-      $('#project1Title').css({'font-size':24, 'opacity': 1});
-    });
-
-    // TODO: add click function
-    $('#project2').hover(function() {
-      $('#project2Title').css({'font-size':38, 'opacity':0.5});
-    }, function() {
-      $('#project2Title').css({'font-size':24, 'opacity': 1});
-    });
-
-}
-
 
 // hides and shows secitons on inital page load
 function initializePage() {

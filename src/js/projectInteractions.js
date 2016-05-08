@@ -8,9 +8,15 @@ $('#specifics2').hide();
 $('#project1').on('click', function(event) {
   event.preventDefault();
   if (project1Focused === false) {
+
     project1Focused = true;
-    // $('#project1Title').hide();
-    // $('#project2').hide();
+    $('#imageContainer').removeClass('col-md-12');
+    $('#imageContainer').addClass('col-md-7');
+
+    $('#image1').css({
+      'height':'100%'
+    });
+
     $('#project1').animate({
       height:'500px',
       width: '900px'
@@ -18,13 +24,25 @@ $('#project1').on('click', function(event) {
       $('#project2').hide();
     });
 
+    $('#project1Title').hide();
+
     $('#project2').animate({
       height:'0px',
       width:'0px'
     });
     $('#specifics1').show(100);
+
+
   } else {
     project1Focused = false;
+
+    $('#imageContainer').removeClass('col-md-7');
+    $('#imageContainer').addClass('col-md-12');
+
+    $('#image1').css({
+      'height':'75%'
+    });
+
     $('#project1').animate({
       height:'300px',
       width: '450px'
@@ -36,7 +54,7 @@ $('#project1').on('click', function(event) {
       width: '450px'
     });
 
-
+    $('#project1Title').show();
     $('#project2').show();
 
   }
@@ -46,18 +64,20 @@ $('#project1').on('click', function(event) {
 $('#project2').on('click', function(event) {
   event.preventDefault();
   if (project2Focused === false) {
+
     project2Focused = true;
+
+    $('#image2').css({
+      'height':'100%'
+    });
+
     $('#project1').animate({
       height:'0px',
       width:'0px'
     }, function() {
       $('#project1').hide();
     });
-    /*
-    $('#headlinesImage').css({
-      'height':'80%',
-      'width':'80%'
-    });*/
+    $('#project2Title').hide();
 
 
     $('#project2').animate({
@@ -78,6 +98,10 @@ $('#project2').on('click', function(event) {
       width:'450px'
     });
 
+    $('#image2').css({
+      'height':'75%'
+    });
+
     $('#headlinesImage').css({
       'height':'100%',
       'width':'100%'
@@ -87,6 +111,7 @@ $('#project2').on('click', function(event) {
       height:'300px',
       width: '450px'
     });
+    $('#project2Title').show();
     $('#project1').show();
   }
 });
@@ -98,14 +123,28 @@ $('.projectContainer').hover(function() {
       'opacity':0.6,
       'cursor':'pointer'
     });
-    if (!project1Focused) {
-      $('#project1Title').show();
-    }
 }, function() {
     $(this).css({
       'background-color':'white',
       'opacity':1,
       'cursor':'default'
     });
-    $('#project1Title').hide();
 });
+
+// add hover animations to webpage
+function hoverAnimations() {
+    // TODO: add click function
+    $('#project1').hover(function() {
+      $('#project1Title').css({'font-size':38, 'opacity':0.5});
+    }, function() {
+      $('#project1Title').css({'font-size':24, 'opacity': 1});
+    });
+
+    // TODO: add click function
+    $('#project2').hover(function() {
+      $('#project2Title').css({'font-size':38, 'opacity':0.5});
+    }, function() {
+      $('#project2Title').css({'font-size':24, 'opacity': 1});
+    });
+
+}
