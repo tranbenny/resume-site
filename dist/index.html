@@ -11,7 +11,7 @@
     <nav id="navbar" class="navbar navbar-fixed-top">
       <div class="container-fluid" style="padding-left:0px; padding-right:0px;">
         <!-- small screen navbar -->
-        <div class="navbar-header">
+        <div class="navbar-header" id="small-navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-tabs" aria-expanded="false">
             <i class="fa fa-bars fa-3x" aria-hidden="true"></i>
           </button>
@@ -24,6 +24,7 @@
             <li id="experienceLink" class="nav-item" style="text-align:center;"><a href="#experience"><p class="lead">EXPERIENCE</p></a></li>
             <li id="skillsLink" class="nav-item" style="text-align:center;"><a href="#skills"><p class="lead">SKILLS</p></a></li>
             <li id="projectsLink" class="nav-item" style="text-align:center;"><a href="#projects"><p class="lead">PROJECTS</p></a></li>
+            <li id="contactLink" class="nav-item" style="text-align:center;"><a href="#contact"><p class="lead">CONTACT</p></a></li>
           </ul>
         </div>
       </div>
@@ -54,7 +55,7 @@
       <!-- EXPERIENCE, EDUCATION -->
       <div class="row section" id="experience">
         <div class="col-md-6 col-sm-12" style="padding-left:80px;">
-          <p style="font-family:futura; font-size:36px;" id="workHeader">WORK EXPERIENCE</p>
+          <p style="font-family:futura, Helvetica Neue, Helvetica, Arial; font-size:36px;" id="workHeader">WORK EXPERIENCE</p>
           <!-- LIST OF JOB TYPES -->
           <div style="margin-top:20px;" id="accordian">
             <div class="row">
@@ -85,7 +86,7 @@
                       intensity radiation areas and geometrical beam shapes.
                       Enhanced the data reports further by creating a new function that applies custom linear
                       functions to entire datasets for visualization purposes.</p></li>
-                    <li><p>Improved data validation by writing tests to ensure the validness of optimization code inputs and outputs</p></li>
+                    <li><p>Improved data validation by writing tests for optimization code inputs</p></li>
                   </ul>
                 </div>
             </div>
@@ -122,7 +123,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12" style="padding-left:70px;">
-          <p style="font-size:36px; font-family:futura;" id="educationHeader">EDUCATION</p>
+          <p style="font-size:36px; font-family:futura, Helvetica Neue, Helvetica, Arial;" id="educationHeader">EDUCATION</p>
             <div style="margin-top:20px;">
                 <div class="jobHeader">
                   <h3 style="display:inline-block; margin-left:20px;">BACHELOR OF SCIENCE:<br />BIOCHEMISTRY</h3>
@@ -154,7 +155,7 @@
 
       <!-- SKILLS -->
       <div id="skills" class="row section center">
-        <p style="font-size:36px; font-family:futura;">SKILLS</p>
+        <p style="font-size:36px; font-family:futura, Helvetica Neue, Helvetica, Arial;">SKILLS</p>
         <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:30px;">
           <div class="col-md-3 col-sm-12">
             <div class="skill-icon">
@@ -211,19 +212,19 @@
       </div>
 
       <!-- PROJECTS -->
-      <div id="projects" class="center section col-md-12 col-sm-12">
-        <p style="font-size:36px; font-family:futura;">PROJECTS</p>
+      <div id="projects" class="row center section col-md-12 col-sm-12" style="margin-bottom:20px; border:none;">
+        <p style="font-size:36px; font-family:futura, Helvetica Neue, Helvetica, Arial;">PROJECTS</p>
         <div style="display:flex; flex-direction:row; margin-top:40px;">
           <div class="projectContainer col-md-6 col-sm-12" id="project1" style="height:300px; width:450px;">
             <div class="row" style="height: 100%">
               <h1 style="font-family:Helvetica;" id="project1Title">YELP DAY PLANNER</h1>
-              <div class="col-md-12" style="height:100%;" id="imageContainer">
-                <img src="snapshot.png" style="height:75%;" id="image1" alt="">
+              <div class="col-md-12" style="height:80%;" id="imageContainer">
+                <img src="snapshot.png" style="height:80%;" id="image1" alt="">
                 <p class="lead" style="display:none; color:white; font-size:30px; position:absolute; top:70px; top:100px; width:450px;">HELLO WORLD</p>
               </div>
-              <div class="col-md-5" id="specifics1" style="display:none; text-align:left; height:100px;">
-                <h3 style="font-family:Helvetica">Plan the Perfect Day</h3>
-                <div>
+              <div class="col-md-5 col-sm-12" id="specifics1" style="display:none; text-align:left;">
+                <h3 style="font-family:Helvetica; margin-top:0px;">Plan the Perfect Day</h3>
+                <div class="col-sm-12">
                   <h4 style="font-family:Helvetica">Java, Android SDK, Firebase, Yelp Android API</h4>
                   <h4><a href="https://github.com/tranbenny/Day-Planner-Android-App">Source Code</a></h4>
                   <h4 style="font-family:Helvetica">Features:</h4>
@@ -238,11 +239,11 @@
             </div>
           </div>
           <div id="project2" class="col-sm-12 col-md-6 projectContainer" style="padding:0px; height:300px; width:450px;">
-            <div id="headlinesImage" class="col-md-10" style="height:100%; width:100%;">
+            <div id="headlinesImage" class="col-md-10" style="height:60%; width:100%;">
               <h1 style="font-family:Helvetica;" id="project2Title">NEWS BIAS ANALYSIS</h1>
-              <img src="headlinesScreenshot.png" id="image2" style="height:75%; width:100%">
+              <img src="headlinesScreenshot.png" id="image2" style="height:100%; width:100%">
             </div>
-            <div class="col-md-2" id="specifics2" style="text-align:left;">
+            <div class="col-md-2" id="specifics2" style="display:none; text-align:left;">
               <h3 style="font-family:Helvetica">Global Headlines Data Visualization</h3>
               <h4 style="font-family:Helvetica">Python, BeautifulSoup, Flask, MySQL, Angular, D3</h4>
               <p><a href="https://github.com/tranbenny/WorldHeadlinesDataVisual">Source Code</a></p>
@@ -252,17 +253,51 @@
         </div>
       </div>
 
+      <div id="contact" class="row section center">
+        <h1>CONTACT</h1>
+        <div class="input-group row" style="width:50%; margin-left:auto; margin-right:auto; margin-top:20px;">
+          <span class="input-group-addon">Name</span>
+          <input type="text" class="form-control" placeholder="Enter Name Here">
+        </div>
+
+        <div class="input-group row" style="width:50%; margin-left:auto; margin-right:auto; margin-top:10px;">
+          <span class="input-group-addon">Email</span>
+          <input type="email" class="form-control" placeholder="Enter Email Here">
+        </div>
+
+        <div class="row" style="width:50%; margin-left:auto; margin-right:auto; margin-top:30px;">
+          <textarea style="width:100%; height:300px; border:2px solid lightgray; border-radius:5px;"></textarea>
+        </div>
+
+        <div class="row" style="width:50%; margin-left:auto; margin-right:auto;">
+          <button class="btn btn-success" style="margin-top:20px; float:right;">Send</button>
+        </div>
+      </div>
+
+
+
 
     </div>
+    <!--
+    <div id="footer" class="container-fluid center" style="font-family:futura, Helvetica Neue, Helvetica, Arial; background-color:#000000; color:white;
+    padding-left:0px; padding-right:0px;">
+      <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
+      <p>BASED IN SEATTLE, WA</p>
+      <p>PHONE: (206) 326-9583</p>
+      <p style="margin-bottom:40px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
+    </div>-->
   </div>
 
-  <!-- FOOTER -->
-  <div id="footer" class="row center container-fluid" style="font-family:futura; background-color:#000000; color:white;">
-    <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
-    <p>BASED IN SEATTLE, WA</p>
-    <p>PHONE: (206) 326-9583</p>
-    <p style="margin-bottom:40px;">BUILT WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS<p>
-  </div>
+  <footer class="footer center" style="background-color:#3f3f3f; color:white;">
+    <div class="container">
+      <p class="top-spacing">EMAIL: tran.benny123@gmail.com</p>
+      <p>BASED IN SEATTLE, WA</p>
+      <p>PHONE: (206) 326-9583</p>
+      <p style="margin-bottom:20px;">BUILD WITH: JAVASCRIPT, JQUERY, BOOTSTRAP, HTML, CSS</p>
+    </div>
+  </footer>
+
+
   <script src="bundle.js"></script>
 </body>
 </html>

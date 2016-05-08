@@ -1,5 +1,4 @@
 // handles initial page loading and home section interactions/animations
-
 'use strict';
 (function() {
 

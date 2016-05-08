@@ -1,3 +1,5 @@
+// handles interactions for experience/education section of page 
+
 'use strict';
 (function() {
 
@@ -7,9 +9,8 @@ function main() {
 }
 
 
-// toggles showing/hiding the main job description for the windows
+// toggles showing/hiding the main job description for the experience blocks
 function loadDescription(event) {
-  // handle clicks for all elements of the job header
   if ($(event.target).is('i')) {
     var targetId = event.target.id + 'Section';
     var arrowId = event.target.id;
@@ -37,7 +38,7 @@ function createRotateButtonInteractions() {
   });
 }
 
-// hover/click interactions over job headers
+// adds hover/click interactions over job headers
 function createHeaderInteractions() {
   $('.jobHeader').hover(function() {
       $(this).css({'cursor':'pointer', 'opacity':'0.6'});

@@ -1,13 +1,14 @@
+// handles button/section interactions for skills section of webpage
+
 'use strict';
 (function() {
 
 function main() {
   showHoverSkill();
   toggleSkillSections();
-  initializePage();
 }
 
-// adds hover function to skill icons
+// adds hover option to skill icons
 function showHoverSkill() {
   $('.skill-icon').hover(function() {
     $(this).css({
@@ -33,11 +34,6 @@ function toggleSkillSections() {
 }
 
 
-
-// hide sections on load
-function initializePage() {
-
-}
 
 main();
 

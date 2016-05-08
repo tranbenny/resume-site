@@ -2,7 +2,7 @@ TODO List:
 
 Layout:
 - fix weird centering layouts, DONE
-- choose a better font for everything, DONE 
+- choose a better font for everything, DONE
 
 User Interaction:
 - update active tab style, DONE
@@ -15,19 +15,23 @@ User Interaction:
 ISSUES:
 - fix navigation menu overlap, DONE
 - dont want active tab bouncing for the scrolling when button clicked, DONE
-- need to fix scrolling dimension
+- need to fix scrolling dimension, DONE
 - close small navigation menu bar when button is clicked
+- projects section getting messed up on small screens, DONE
+- projects section on hover needs to fit all the content 
 
 Animations:
 - Scrolling animation for tabs, DONE
-- fade in animations for initial page load
+- fade in animations for initial page load, DONE
 - add rotate animation for projects section, DONE  add hover icons, DONE
 ISSUES:
 - fix upwards scrolling back to about section, DONE
-- scrolling animation broke, need to fix
+- scrolling animation broke, need to fix, DONE
 
 Error Handling:
 - handle 404 errors
+
+- add contact section?
 
 Testing
 - test on chrome, firebox, IE, safari
