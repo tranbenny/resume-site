@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.projectTitle {
+  font-family:Helvetica;
+}
+
 #project2Title {
   font-family:Helvetica;
   color:white;
@@ -26,22 +30,13 @@
   background-color:#337ab7;
 }
 
-.arrowCol {
-  height:500px;
+#mainProjectContainer {
   display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
+  flex-direction:row;
+  margin-top:40px;
 }
 
-.sliderArrow {
-  opacity: 0.6;
-}
-
-.dot {
-  opacity:0.3;
-}
-
-.activeDot {
-  opacity: 1;
+.projectContainer {
+  height:300px;
+  width:450px;
 }

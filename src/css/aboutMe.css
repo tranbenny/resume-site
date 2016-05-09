@@ -1,11 +1,8 @@
-#about {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#name {
+  font-size:80px;
+  margin-top:150px;
 }
 
-#name {
-  font-size:100px;
-  margin-top:150px;
+#home {
+  padding-bottom:30px;
 }

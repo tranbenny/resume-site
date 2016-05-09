@@ -12,6 +12,7 @@ require('./css/projects.css');
 require('./css/experience.css');
 require('./css/skills.css');
 require('./css/contact.css');
+require('./css/footer.css');
 
 // app's js files
 require('./js/app.js');

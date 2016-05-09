@@ -2,6 +2,7 @@ body {
 
 }
 
+
 @font-face {
   font-family: futura;
   src: url(futura.ttf);
@@ -36,4 +37,13 @@ body {
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   transition: all 1x ease;
+}
+
+.section-header {
+  font-family: futura, Helvetica Neue, Helvetica, Arial;
+  font-size:36px;
+}
+
+.left-align {
+  text-align: left;
 }
