@@ -1,0 +1,34 @@
+.groupSection {
+  width:50%;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.invalidLabel {
+  color:white;
+  background-color:red;
+}
+
+.validLabel {
+  color:white;
+  background-color:#4cae4c;
+}
+
+#message textarea {
+  width:100%;
+  height:300px;
+  border:2px solid lightgray;
+  border-radius:5px;
+}
+
+#sendMessageButton {
+  margin-top:20px;
+  float:right;
+}
+
+#statusGroup p {
+  background-color:darkgray;
+  border-radius:5px;
+  padding:10px;
+  color:white;
+}

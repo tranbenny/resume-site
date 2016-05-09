@@ -16,7 +16,6 @@ function main() {
 // ISSUE: NEED TO CLICK TWICE TO EXPAND THE WINDOW NOW
 function setButtonClickOnSmallScreen() {
     $('.nav-item').on('click', function(event) {
-
       if ($('#navbar-collapse-tabs').attr('aria-expanded')) {
         $('#navbar-collapse-tabs').attr('aria-expanded', false);
         $('#navbar-collapse-tabs').height(1);
@@ -25,11 +24,8 @@ function setButtonClickOnSmallScreen() {
 }
 
 
-
-
 // sets passed tab as the active tab for navbar tab highlighting
 function setActiveTab(section) {
-
   current.removeClass('active');
   current = $('#' + section + 'Link');
   current.addClass('active');
@@ -67,8 +63,8 @@ function scrollingTab(event) {
   event.preventDefault();
   var experienceHeight = $('#experience').offset().top - 70;
   var skillsHeight = $('#skills').offset().top - 200;
-  var projectsHeight = $('#projects').offset().top;
-  var contactHeight = $('#contact').offset().top;
+  var projectsHeight = $('#projects').offset().top - 200;
+  var contactHeight = $('#contact').offset().top - 200;
 
   var scroll = $(window).scrollTop();
   if (scroll >= 0 && scroll < experienceHeight) {

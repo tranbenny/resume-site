@@ -18,7 +18,7 @@ ISSUES:
 - need to fix scrolling dimension, DONE
 - close small navigation menu bar when button is clicked
 - projects section getting messed up on small screens, DONE
-- projects section on hover needs to fit all the content 
+- projects section on hover needs to fit all the content , DONE
 
 Animations:
 - Scrolling animation for tabs, DONE
@@ -31,7 +31,9 @@ ISSUES:
 Error Handling:
 - handle 404 errors
 
-- add contact section?
+CONTACT SECTION:
+- add form validation
+- add form succss/error messages 
 
 Testing
 - test on chrome, firebox, IE, safari
